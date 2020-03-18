@@ -1,3 +1,21 @@
+@font-face {
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  src: url("/opensans.woff2") format("woff2"), url("/opensans.woff") format("woff");
+}
+@font-face {
+  font-family: "Open Sans Light", Arial, Helvetica, sans-serif;
+  src: url("/opensanslight.woff2") format("woff2"), url("/opensanslight.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Gilroy Light", Arial, Helvetica, sans-serif;
+  src: url("/gilroylight.woff2") format("woff2"), url("/gilroylight.woff") format("woff");
+}
+@font-face {
+  font-family: "Gilroy ExtraBold", Arial, Helvetica, sans-serif;
+  src: url("/gilroyextrabold.woff2") format("woff2"), url("/gilroyextrabold.woff") format("woff");
+}
+
 html { box-sizing: border-box; }
 *, *::before, *::after { box-sizing: inherit; }
 
@@ -8,15 +26,6 @@ body {
   font-family: "Open Sans Light", Arial, Helvetica, sans-serif;
   font-size: 15px;
   line-height: 30px;
-}
-
-@font-face {
-  font-family: "Gilroy Light";
-  src: url("/gilroylight.woff2") format("woff2"), url("/gilroylight.woff") format("woff");
-}
-@font-face {
-  font-family: "Gilroy ExtraBold";
-  src: url("/gilroyextrabold.woff2") format("woff2"), url("/gilroyextrabold.woff") format("woff");
 }
 
 .visually-hidden {
@@ -37,7 +46,7 @@ a {
 }
 
 .button {
-  font-family: "Gilroy ExtraBold";
+  font-family: "Gilroy ExtraBold", Arial, Helvetica, sans-serif;;
   color: black;
   letter-spacing: 3.6px;
 
@@ -52,6 +61,8 @@ a {
 
 .main-header {
   position: relative;
+
+  width: 1160px;
 
   background-color: #f7e296;
   margin-top: 40px;
@@ -146,10 +157,11 @@ a {
   line-height: 36px;
 }
 
+/* Главная страница */
+
 .heading {
   font-family: "Gilroy ExtraBold", Arial, Helvetica, sans-serif;
   font-size: 47px;
-  line-height: 56px;
   line-height: 48px;
 }
 
