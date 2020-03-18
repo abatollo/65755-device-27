@@ -1,0 +1,232 @@
+html { box-sizing: border-box; }
+*, *::before, *::after { box-sizing: inherit; }
+
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Open Sans Light", Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  line-height: 30px;
+}
+
+@font-face {
+  font-family: "Gilroy Light";
+  src: url("/gilroylight.woff2") format("woff2"), url("/gilroylight.woff") format("woff");
+}
+@font-face {
+  font-family: "Gilroy ExtraBold";
+  src: url("/gilroyextrabold.woff2") format("woff2"), url("/gilroyextrabold.woff") format("woff");
+}
+
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+.button {
+  font-family: "Gilroy ExtraBold";
+  color: black;
+  letter-spacing: 3.6px;
+
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+
+  background-color: #f0c52e;
+}
+
+/* Шапка */
+
+.main-header {
+  position: relative;
+
+  background-color: #f7e296;
+  margin-top: 40px;
+}
+
+.header-logo {
+  position: absolute;
+
+  top: -18px;
+  left: 60px;
+}
+
+.header-logo:hover img {
+  opacity: 0.6;
+}
+
+.header-logo:active img {
+  opacity: 0.3;
+}
+
+.header-link {
+  color: black;
+}
+
+.header-link:hover {
+  opacity: 0.6;
+}
+
+.header-link:active {
+  opacity: 0.3;
+}
+
+.header-top-menu {
+  list-style: none;
+}
+
+.search-input {
+  background-color: #f7e296;
+  border: none;
+  color: rgba(255, 255, 255, 0.3);
+  height: 49px;
+  border-top: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+}
+
+.search-input::placeholder {
+  color: black;
+}
+
+.search-input:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.search-input:focus {
+  color: black;
+  border-bottom: 2px solid black;
+}
+
+.search-button {
+  width: 85px;
+  height: 49px;
+  border: solid 2px black;
+  background-color: transparent;
+}
+
+.search-button:hover {
+  color: white;
+  background-color: black;
+}
+
+.search-button:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.header-bottom-menu {
+  list-style: none;
+}
+
+.header-bottom-item {
+  font-family: "Gilroy ExtraBold", Arial, Helvetica, sans-serif;
+  letter-spacing: 3.6px;
+  font-size: 18px;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.header-bottom-submenu {
+  list-style: none;
+}
+
+.header-bottom-submenu a {
+  line-height: 36px;
+}
+
+.heading {
+  font-family: "Gilroy ExtraBold", Arial, Helvetica, sans-serif;
+  font-size: 47px;
+  line-height: 56px;
+  line-height: 48px;
+}
+
+.slider-heading {
+  line-height: 56px;
+}
+
+.slider-lead {
+  line-height: 30px;
+}
+
+.slider-term {
+  font-family: "Gilroy Light", Arial, Helvetica, sans-serif;
+  font-size: 36px;
+}
+
+.service-lead {
+  line-height: 30px;
+}
+
+/* Главная */
+
+.categories-list {
+  list-style: none;
+}
+
+.category-item {
+  font-family: "Gilroy ExtraBold", Arial, Helvetica, sans-serif;
+  color: black;
+}
+
+.services {
+  background-color: #e5e5e5;
+}
+
+.suppliers-list {
+  list-style: none;
+}
+
+/* Подвал */
+
+.main-footer {
+  background-color: #464646;
+}
+
+.footer-logo {
+  fill: #ffc600;
+}
+
+.footer-top-menu {
+  list-style: none;
+}
+
+.footer-top-menu a {
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 36px;
+}
+
+.footer-middle {
+  line-height: 30px;
+  color: white;
+}
+
+.footer-middle a {
+  color: white;
+}
+
+.footer-bottom-menu {
+  list-style: none;
+  font-family: "Gilroy ExtraBold", Arial, Helvetica, sans-serif;
+  letter-spacing: 3.6px;
+  font-size: 18px;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.footer-bottom-menu {
+  background-color: #7e7e7e;
+  font-size: 0;
+}
