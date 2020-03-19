@@ -1,23 +1,36 @@
 @font-face {
-  font-family: "Open Sans", Arial, Helvetica, sans-serif;
-  src: url("/opensans.woff2") format("woff2"), url("/opensans.woff") format("woff");
-}
-@font-face {
-  font-family: "Open Sans Light", Arial, Helvetica, sans-serif;
-  src: url("/opensanslight.woff2") format("woff2"), url("/opensanslight.woff") format("woff");
+  font-family: "Open Sans";
+  src: local("Open Sans"), url("../fonts/opensans.woff2") format("woff2"),
+    url("../fonts/opensans.woff") format("woff");
 }
 
 @font-face {
-  font-family: "Gilroy Light", Arial, Helvetica, sans-serif;
-  src: url("/gilroylight.woff2") format("woff2"), url("/gilroylight.woff") format("woff");
-}
-@font-face {
-  font-family: "Gilroy ExtraBold", Arial, Helvetica, sans-serif;
-  src: url("/gilroyextrabold.woff2") format("woff2"), url("/gilroyextrabold.woff") format("woff");
+  font-family: "Open Sans Light";
+  src: url("../fonts/opensanslight.woff2") format("woff2"),
+    url("../fonts/opensanslight.woff") format("woff");
 }
 
-html { box-sizing: border-box; }
-*, *::before, *::after { box-sizing: inherit; }
+@font-face {
+  font-family: "Gilroy Light";
+  src: url("../fonts/gilroylight.woff2") format("woff2"),
+    url("../fonts/gilroylight.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Gilroy ExtraBold";
+  src: url("../fonts/gilroyextrabold.woff2") format("woff2"),
+    url("../fonts/gilroyextrabold.woff") format("woff");
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
 
 body {
   margin: 0;
@@ -46,7 +59,9 @@ a {
 }
 
 .button {
-  font-family: "Gilroy ExtraBold", Arial, Helvetica, sans-serif;;
+  display: inline-block;
+
+  font-family: "Gilroy ExtraBold", Arial, Helvetica, sans-serif;
   color: black;
   letter-spacing: 3.6px;
 
@@ -62,10 +77,18 @@ a {
 .main-header {
   position: relative;
 
+  margin: 0 auto;
+
   width: 1160px;
 
   background-color: #f7e296;
   margin-top: 40px;
+  padding-top: 50px;
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-bottom: 140px;
+
+  z-index: -1;
 }
 
 .header-logo {
@@ -97,6 +120,15 @@ a {
 
 .header-top-menu {
   list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search-form {
+  display: flex;
 }
 
 .search-input {
@@ -139,6 +171,12 @@ a {
 
 .header-bottom-menu {
   list-style: none;
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .header-bottom-item {
@@ -151,6 +189,9 @@ a {
 
 .header-bottom-submenu {
   list-style: none;
+  padding: 0;
+  margin: 0;
+  display: none;
 }
 
 .header-bottom-submenu a {
@@ -159,10 +200,40 @@ a {
 
 /* Главная страница */
 
+.slider {
+  position: relative;
+  top: -100px;
+}
+
 .heading {
   font-family: "Gilroy ExtraBold", Arial, Helvetica, sans-serif;
   font-size: 47px;
   line-height: 48px;
+}
+
+.slide {
+  width: 1160px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.slide::before {
+  content: "";
+  width: 100px;
+  height: 7px;
+  background-color: white;
+  position: relative;
+  left: 580px;
+  z-index: 2;
+}
+
+.slide::after {
+  content: "01";
+  color: white;
+  font-family: "Gilroy ExtraBold", Arial, Helvetica, sans-serif;
+  font-size: 179px;
+  position: relative;
 }
 
 .slider-heading {
@@ -241,4 +312,8 @@ a {
 .footer-bottom-menu {
   background-color: #7e7e7e;
   font-size: 0;
+}
+
+.display-none {
+  display: none;
 }

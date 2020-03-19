@@ -11,13 +11,11 @@
 <body>
   <header class="main-header">
     <div class="container">
-      <a class="header-logo">
-        <img src="img/logo.svg" width="168" height="36" alt="Логотип интернет-магазина «Девайс», выполненный в виде стизизованной надписи «Девайс»">
-      </a>
+      <a class="header-logo"><img src="img/logo.svg" width="168" height="36" alt="Логотип интернет-магазина «Девайс», выполненный в виде стизизованной надписи «Девайс»"></a>
 
       <ul class="header-top-menu">
         <li>
-          <form action="http://echo.htmlacademy.ru" method="get">
+          <form class="search-form" action="http://echo.htmlacademy.ru" method="get">
             <label class="visually-hidden" for="search">Поиск по сайту</label>
             <input class="search-input" type="search" placeholder="Поиск по сайту" id="search" name="search">
             <button class="search-button" type="submit">Найти</button>
@@ -41,15 +39,9 @@
               <li><a class="header-link" href="#">Квадрокоптеры</a></li>
             </ul>
           </li>
-          <li>
-            <a class="header-bottom-item header-link" href="#">Доставка</a>
-          </li>
-          <li>
-            <a class="header-bottom-item header-link" href="#">Гарантия</a>
-          </li>
-          <li>
-            <a class="header-bottom-item header-link" href="#">Контакты</a>
-          </li>
+          <li><a class="header-bottom-item header-link" href="#">Доставка</a></li>
+          <li><a class="header-bottom-item header-link" href="#">Гарантия</a></li>
+          <li><a class="header-bottom-item header-link" href="#">Контакты</a></li>
         </ul>
       </nav>
     </div>
@@ -61,30 +53,32 @@
     <section class="slider">
       <h2 class="visually-hidden">Популярные товары</h2>
 
-      <div>
-        <h3 class="heading slider-heading">
-          Делай селфи,<br>
-          как Бен Стиллер!
-        </h3>
+      <div class="slide">
         <img src="img/slider-1.png" width="384" height="486" alt="Селфи-палка в сложенном и разложенном состояниях">
-        <p class="slider-lead">
-          Самая длинная палка для селфи доступна в нашем магазине.<br>
-          Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
-        </p>
-        <a class="button" href="#">Подробнее</a>
-        <dl>
-          <dt class="slider-term">8,5 м</dt>
-          <dd class="slider-definition">Длина палки</dd>
+        <div>
+          <h3 class="heading slider-heading">
+            Делай селфи,<br>
+            как Бен Стиллер!
+          </h3>
+          <p class="slider-lead">
+            Самая длинная палка для селфи доступна в нашем магазине.<br>
+            Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
+          </p>
+          <a class="button" href="#">Подробнее</a>
+          <dl>
+            <dt class="slider-term">8,5 м</dt>
+            <dd class="slider-definition">Длина палки</dd>
 
-          <dt class="slider-term">5 кг</dt>
-          <dd class="slider-definition">Вес палки</dd>
+            <dt class="slider-term">5 кг</dt>
+            <dd class="slider-definition">Вес палки</dd>
 
-          <dt class="slider-term">Карбон</dt>
-          <dd class="slider-definition">Материал</dd>
-        </dl>
+            <dt class="slider-term">Карбон</dt>
+            <dd class="slider-definition">Материал</dd>
+          </dl>
+        </div>
       </div>
 
-      <div>
+      <div class="display-none slide">
         <h3 class="heading slider-heading">Худеем правильно!</h3>
         <img src="img/slider-2.png" width="345" height="485" alt="Фитнес-браслет с экраном">
         <p class="slider-lead">
@@ -98,7 +92,7 @@
         </dl>
       </div>
 
-      <div>
+      <div class="display-none slide">
         <h3 class="heading slider-heading">
           Порхает как бабочка,<br>
           жалит как пчела!
@@ -256,7 +250,8 @@
       </ul>
 
       <a href="https://htmlacademy.ru/intensive/htmlcss">
-        <img src="img/logo-html.svg" width="27" height="35" alt="Разработчик — студент HTML Academy"></a>
+        <img src="img/logo-html.svg" width="27" height="35" alt="Разработчик — студент HTML Academy">
+      </a>
     </div>
   </footer>
 
