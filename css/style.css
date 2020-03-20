@@ -1,3 +1,15 @@
+/* ссылке aria label
+
+radio-button slider
+
+сервисы фон псевдожлементом
+
+https://codeguide.academy/html-css.html#css-order
+
+label for
+
+disabled */
+
 @font-face {
   font-family: "Open Sans";
   src: local("Open Sans"), url("../fonts/opensans.woff2") format("woff2"),
@@ -218,22 +230,29 @@ a {
   justify-content: space-around;
 }
 
-.slide::before {
+.slider-content {
+  position: relative;
+}
+
+.slider-content::before {
   content: "";
   width: 100px;
   height: 7px;
   background-color: white;
-  position: relative;
-  left: 580px;
+  position: absolute;
+  left: 0;
+  top: 0;
   z-index: 2;
 }
 
-.slide::after {
+.slider-content::after {
   content: "01";
   color: white;
   font-family: "Gilroy ExtraBold", Arial, Helvetica, sans-serif;
   font-size: 179px;
-  position: relative;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .slider-heading {
@@ -244,24 +263,34 @@ a {
   line-height: 30px;
 }
 
-.slider-term {
+.properties td {
   font-family: "Gilroy Light", Arial, Helvetica, sans-serif;
   font-size: 36px;
 }
 
-.service-lead {
+.properties th {
   line-height: 30px;
 }
 
 /* Главная */
 
+.categories {
+  width: 1160px;
+  margin: 0 auto;
+}
+
 .categories-list {
   list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
 }
 
 .category-item {
   font-family: "Gilroy ExtraBold", Arial, Helvetica, sans-serif;
   color: black;
+  font-size: 18px;
 }
 
 .services {
