@@ -803,8 +803,9 @@ a {
 
 .footer-top-menu a {
   color: white;
-  padding-left: 65px;
+  margin-left: 65px;
   opacity: 0.7;
+  position: relative;
 }
 
 .footer-top-menu a:hover {
@@ -812,6 +813,15 @@ a {
 }
 
 .footer-top-menu a:active {
+  opacity: 0.3;
+}
+
+.footer-top-menu a::before {
+  filter: invert(75%) sepia(22%) saturate(3823%) hue-rotate(3deg) brightness(106%) contrast(105%);
+}
+
+a.footer-logout {
+  margin-left: 15px;
   opacity: 0.3;
 }
 
@@ -1166,6 +1176,7 @@ a {
   padding: 0;
   list-style: none;
   display: flex;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
 }
 
 .sorting-item {
@@ -1173,7 +1184,7 @@ a {
 }
 
 .sorting-item:nth-of-type(4) {
-  margin-left: 192px;
+  margin-left: 184px;
   margin-right: 19px;
 }
 
@@ -1193,6 +1204,34 @@ a {
 .sorting-item a:active,
 .sorting-item-active a {
   color: black;
+}
+
+.sorting-arrow a::before {
+  content: "";
+  display: inline-block;
+  width: 11px;
+  height: 10px;
+  vertical-align: middle;
+  background-color: transparent;
+  opacity: 0.2;
+}
+
+.sorting-arrow-up a::before {
+  background-image: url(../img/icon-up-dir.svg);
+}
+
+.sorting-arrow-down a::before {
+  background-image: url(../img/icon-down-dir.svg);
+}
+
+.sorting-arrow a:hover::before {
+  opacity: 0.4;
+}
+
+.sorting-arrow-active a::before,
+.sorting-arrow a:active::before,
+.sorting-arrow a:focus::before {
+  opacity: 1;
 }
 
 .product-items {
@@ -1268,6 +1307,20 @@ a {
   background-color: transparent;
   color: black;
   font-size: 13px;
+  opacity: 0.5;
+}
+
+.button-compare:hover,
+.button-compare:focus {
+  opacity: 1;
+}
+
+.button-compare:active {
+  opacity: 0.2;
+}
+
+.img-container img:hover {
+  opacity: 0.7;
 }
 
 .pagination {
@@ -1314,16 +1367,16 @@ a {
   color: #acacac;
 }
 
-.page a:active, .page a:focus, .page.current a {
-  color: black;
-}
-
 .page a {
   color: rgba(0, 0, 0, 0.3);
 }
 
 .page a:hover {
   color: rgba(0, 0, 0, 0.6);
+}
+
+.page a:active, .page a:focus, .current-page a {
+  color: black;
 }
 
 .filter-form {
@@ -1360,9 +1413,45 @@ a {
   font-family: "Gilroy ExtraBold", Arial, Helvetica, sans-serif;
 }
 
-.filter-price-range input {
+.price-value {
   width: 50px;
 }
+
+/*  */
+
+.price-range {
+  position: relative;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  height: 2px;
+  background-image: linear-gradient(to right, #91c92f 0%, #91c92f 50%, #dbdbdb 50%, #dbdbdb 100%);
+}
+
+.price-pin {
+  position: absolute;
+  top: -10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #ababab;
+  border: 8px solid #fff;
+  box-shadow: 0 2px 0 0 #dadada;
+  cursor: pointer;
+}
+
+.price-pin-min {
+  left: -10px;
+}
+
+.price-pin-max {
+  left: 100px;
+}
+
+.price-pin:active {
+  transform: scale(1.2);
+}
+
+/*  */
 
 .price-controls {
   position: relative;
@@ -1381,19 +1470,6 @@ a {
   width: 60%;
   height: 2px;
   background: #91c92f;
-}
-
-.range-toggle {
-  content: "";
-  position: absolute;
-  top: -9px;
-  width: 4px;
-  height: 4px;
-  background: #ababab;
-  border: 8px solid #ffffff;
-  border-radius: 50%;
-  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
-  cursor: pointer;
 }
 
 .range-toggle:active {
@@ -1418,6 +1494,72 @@ a {
   background-color: transparent;
 }
 
+.range-toggle:active {
+  transform: scale(1.2);
+}
+
 .price-value[name="min-price"] {
   margin-right: 17px;
+}
+
+/* Список галок */
+
+.filter-form ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.filter-form li {
+  position: relative;
+  padding-left: 40px;
+  line-height: 26px;
+  vertical-align: middle;
+  margin-bottom: 17px;
+}
+
+.filter-input-checkbox + label::before,
+.filter-input-radio + label::before {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  background-repeat: no-repeat;
+  left: 0;
+  content: "";
+}
+
+.filter-input-checkbox + label::before {
+  top: 0;
+  background-image: url(../img/checkbox-off.svg);
+}
+
+.filter-input-checkbox:checked + label::before {
+  background-image: url(../img/checkbox-on.svg);
+  background-repeat: no-repeat;
+}
+
+.filter-input-radio+label::before {
+  top: 0;
+  background-image: url(../img/radio-off.svg);
+}
+
+.filter-input-radio:checked + label::before {
+  background-image: url(../img/radio-on.svg);
+  background-repeat: no-repeat;
+}
+
+.filter-input-checkbox + label:hover::before,
+.filter-input-checkbox + label:focus::before,
+.filter-input-radio + label:hover::before,
+.filter-input-radio + label:focus::before {
+  opacity: 0.6;
+}
+
+.filter-input-checkbox:disabled + label,
+.filter-input-radio:disabled + label {
+  opacity: 0.25;
+}
+
+.filter-form .button {
+  width: 100%;
 }

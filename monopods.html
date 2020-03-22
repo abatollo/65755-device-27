@@ -20,7 +20,8 @@
           <button class="search-button" type="submit">Найти</button>
         </form>
       </li>
-      <li><a class="login-link" href="login.html">Войти</a></li>
+      <li><a class="login-link" href="#">Валентин Петухов</a></li>
+      <li><a class="footer-logout" href="#">Выйти</a></li>
       <li><a class="compare-link" href="#">Сравнить</a></li>
       <li><a class="cart-link" href="#">Корзина</a></li>
     </ul>
@@ -85,62 +86,57 @@
         <form class="filter-form" action="http://echo.htmlacademy.ru" method="post">
           <fieldset>
             <legend>Стоимость</legend>
-            <div class="filter-price-range">
-              <div class="price-controls">
-                <div class="scale">
-                  <div class="bar"></div>
-                </div>
-                <div class="range-toggle range-toggle-min"></div>
-                <div class="range-toggle range-toggle-max"></div>
-              </div>
-              <label class="price-label" for="filter-min-price">от</label>
-              <input class="price-value" type="text" name="min-price" id="filter-min-price" value="0">
-              <label class="price-label" for="filter-max-price">до</label>
-              <input class="price-value" type="text" name="max-price" id="filter-max-price" value="5000">
+            <div class="price-range">
+              <div class="price-pin price-pin-min"></div>
+              <div class="price-pin price-pin-max"></div>
             </div>
+            <label class="price-label" for="filter-min-price">от</label>
+            <input class="price-value" type="text" name="min-price" id="filter-min-price" value="0">
+            <label class="price-label" for="filter-max-price">до</label>
+            <input class="price-value" type="text" name="max-price" id="filter-max-price" value="5000">
           </fieldset>
 
           <fieldset>
             <legend>Цвет</legend>
             <ul>
               <li>
-                <input type="checkbox" name="black" id="black" checked>
-                <label>Черный</label>
+                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="black" id="black-picker" checked>
+                <label for="black-picker">Черный</label>
               </li>
               <li>
-                <input type="checkbox" name="white" id="white">
-                <label>Белый</label>
+                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="white" id="white-picker">
+                <label for="white-picker">Белый</label>
               </li>
               <li>
-                <input type="checkbox" name="blue" id="blue" checked>
-                <label>Синий</label>
+                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="blue" id="blue-picker" checked>
+                <label for="blue-picker">Синий</label>
               </li>
               <li>
-                <input type="checkbox" name="red" id="red" checked>
-                <label>Красный</label>
+                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="red" id="red-picker" checked>
+                <label for="red-picker">Красный</label>
               </li>
               <li>
-                <input type="checkbox" name="pink" id="pink">
-                <label>Розовый</label>
+                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="pink" id="pink-picker">
+                <label for="pink-picker">Розовый</label>
               </li>
             </ul>
           </fieldset>
 
           <fieldset>
             <legend>Bluetooth</legend>
-            <ul>
-              <li>
-                <label>
-                  <input type="radio" name="bluetooth" id="bluetooth-on" checked>Есть</label>
+            <ul class="bluetooth-list">
+              <li class="bluetooth-item">
+                <input class="visually-hidden filter-input-radio" type="radio" name="bluetooth" value="yes" id="bluetooth-yes" checked>
+                <label for="bluetooth-yes">Есть</label>
               </li>
-              <li>
-                <label>
-                  <input type="radio" name="bluetooth" id="bluetooth-off">Нет</label>
+              <li class="bluetooth-item">
+                <input class="visually-hidden filter-input-radio" type="radio" name="bluetooth" value="no" id="bluetooth-no">
+                <label for="bluetooth-no">Нет</label>
               </li>
             </ul>
           </fieldset>
 
-          <button type="submit">Показать</button>
+          <button class="button" type="submit">Показать</button>
         </form>
 
       </aside>
@@ -155,15 +151,8 @@
             <li class="sorting-item sorting-item-active"><a href="#">По цене</a></li>
             <li class="sorting-item"><a href="#">По типу</a></li>
             <li class="sorting-item"><a href="#">По популярности</a></li>
-            <li class="sorting-item">
-              <a href="#" aria-label="lalala">
-                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10">
-                  <path fill="#231F20" d="M5.5 0L0 10h11z" /></svg>
-              </a>
-            </li>
-            <li class="sorting-item">
-              <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="10">
-                  <path fill="#231F20" d="M5.5 10L0 0h11" /></svg></a></li>
+            <li class="sorting-item sorting-arrow sorting-arrow-up"><a href="#" aria-label="lalala"></a></li>
+            <li class="sorting-item sorting-arrow sorting-arrow-down sorting-arrow-active"><a href="#" aria-label="lalala"></a></li>
           </ul>
         </div>
 
@@ -226,9 +215,9 @@
 
         <ul class="pagination">
           <li><a href="#">Назад</a></li>
-          <li><a class="page current-page">1</a></li>
-          <li><a class="page" href="#">2</a></li>
-          <li><a class="page" href="#">3</a></li>
+          <li class="page current-page"><a>1</a></li>
+          <li class="page"><a href="#">2</a></li>
+          <li class="page"><a href="#">3</a></li>
           <li><a href="#">Вперед</a></li>
         </ul>
       </section>
@@ -245,10 +234,10 @@
         </a>
 
         <ul class="footer-top-menu">
-          <li><a href="#">Валентин Петухов</a></li>
-          <li><a href="#">Войти</a></li>
-          <li><a href="#">Сравнить</a></li>
-          <li><a href="#">Корзина</a></li>
+          <li><a class="login-link" href="#">Валентин Петухов</a></li>
+          <li><a class="footer-logout" href="#">Выйти</a></li>
+          <li><a class="compare-link" href="#">Сравнить</a></li>
+          <li><a class="cart-link" href="#">Корзина</a></li>
         </ul>
       </div>
 
