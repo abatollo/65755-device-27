@@ -91,6 +91,7 @@ for (var i = 0; i < servicesButtonList.length; ++i) {
 function servicesAddListener(iterator) {
   console.log(iterator);
   servicesButtonList[iterator].addEventListener("click", function (evt) {
+    evt.preventDefault();
     console.log(iterator);
     if (!servicesButtonList[iterator].classList.contains("current-service-button")) {
       document.querySelector(".current-service-button").classList.remove("current-service-button");
