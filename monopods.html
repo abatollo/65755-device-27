@@ -52,13 +52,13 @@
           </ul>
         </li>
         <li><a class="header-bottom-link" href="#">Доставка</a></li>
-        <li><a class="header-bottom-link" href="#">Гарантия</a></li>
-        <li><a class="header-bottom-link" href="#">Контакты</a></li>
+        <li class="header-bottom-guaranty"><a class="header-bottom-link" href="#">Гарантия</a></li>
+        <li class="header-bottom-contacts"><a class="header-bottom-link" href="#">Контакты</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
+  <main class="main-container">
     <div class="container title-container">
       <h1 class="category-title">Моноподы для селфи</h1>
 
@@ -96,8 +96,8 @@
             <input class="price-value" type="text" name="max-price" id="filter-max-price" value="5000">
           </fieldset>
 
-          <fieldset>
-            <legend>Цвет</legend>
+          <fieldset class="fieldset-color">
+            <legend class="fieldset-color-legend">Цвет</legend>
             <ul>
               <li>
                 <input class="visually-hidden filter-input-checkbox" type="checkbox" name="black" id="black-picker" checked>
@@ -122,8 +122,8 @@
             </ul>
           </fieldset>
 
-          <fieldset>
-            <legend>Bluetooth</legend>
+          <fieldset class="fieldset-bluetooth">
+            <legend class="fieldset-bluetooth-legend">Bluetooth</legend>
             <ul class="bluetooth-list">
               <li class="bluetooth-item">
                 <input class="visually-hidden filter-input-radio" type="radio" name="bluetooth" value="yes" id="bluetooth-yes" checked>
@@ -183,7 +183,7 @@
               </div>
             </div>
             <div class="product-sticker">
-              <a href="#">Профессиональная селфи-палка</a>
+              <a class="pro-selfie" href="#">Профессиональная селфи-палка</a>
               <p>1 500 руб.</p>
             </div>
           </li>
@@ -216,11 +216,11 @@
         </ul>
 
         <ul class="pagination">
-          <li><a href="#">Назад</a></li>
+          <li class="page-prev"><a href="#">Назад</a></li>
           <li class="page current-page"><a>1</a></li>
           <li class="page"><a href="#">2</a></li>
           <li class="page"><a href="#">3</a></li>
-          <li><a href="#">Вперед</a></li>
+          <li class="page-next"><a href="#">Вперед</a></li>
         </ul>
       </section>
     </div>
@@ -259,9 +259,9 @@
 
       <div class="footer-bottom">
         <ul class="footer-bottom-menu">
-          <li><a href="#" aria-label="Facebook"></a></li>
-          <li><a href="#" aria-label="Instagram"></a></li>
-          <li><a href="#" aria-label="Twitter"></a></li>
+          <li class="footer-bottom-social"><a href="#" aria-label="Facebook"></a></li>
+          <li class="footer-bottom-social"><a href="#" aria-label="Instagram"></a></li>
+          <li class="footer-bottom-social"><a href="#" aria-label="Twitter"></a></li>
         </ul>
 
         <a class="footer-bottom-developer" href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Ссылка на курс по вёрстке в HTML Academy">
